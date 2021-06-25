@@ -9,28 +9,25 @@ import Foundation
 
 final class ArticleViewModel {
     
-    var articles = [Article]()
+    var articles = [Article]() {
+        didSet {
+            reloadHandler?()
+        }
+    }
+    var reloadHandler: (() -> Void)?
     
     func fetchArticles() {
-        guard let url: URL = URL(string: "http://qiita.com/api/v2/items") else { return }
-        let task: URLSessionTask  = URLSession.shared.dataTask(with: url) { data, response, error in
+        let url = URL(string: "https://qiita.com/api/v2/items?page=1&per_page=20")!
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                fatalError("\(error)")
+            }
+            guard let data = data else { return }
             do {
-                guard let data = data,
-                      let jsonArray = try JSONSerialization.jsonObject(
-                        with: data,
-                        options: JSONSerialization.ReadingOptions.allowFragments
-                      ) as? [Any] else { return }
-                let articlesJson = jsonArray.compactMap { json in
-                    return json as? [String: Any]
-                }
-                let articles = articlesJson.map { articleJson in
-                    return Article(json: articleJson)
-                }
-                DispatchQueue.main.async {
-                    self.articles = articles
-                }
+                let articles = try JSONDecoder().decode([Article].self, from: data)
+                self.articles = articles
             } catch {
-                print(error)
+                fatalError("\(error)")
             }
         }
         task.resume()

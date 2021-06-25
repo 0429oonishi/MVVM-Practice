@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Article {
+struct Article: Decodable {
     let title: String
 
     init(json: [String: Any]) {

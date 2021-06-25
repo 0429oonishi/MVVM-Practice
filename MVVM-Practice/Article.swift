@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct Article {
+    let title: String
+
+    init(json: [String: Any]) {
+        title = json["title"] as? String ?? ""
+    }
+    
+}

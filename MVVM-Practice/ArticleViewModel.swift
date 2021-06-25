@@ -7,12 +7,6 @@
 
 import Foundation
 
-struct Article {
-    init(json: [String: Any]) {
-        
-    }
-}
-
 final class ArticleViewModel {
     
     var articles = [Article]()

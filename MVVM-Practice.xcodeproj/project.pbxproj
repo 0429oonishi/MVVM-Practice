@@ -13,6 +13,7 @@
 		AB111A272686220700CBC62F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB111A252686220700CBC62F /* Main.storyboard */; };
 		AB111A292686220800CBC62F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB111A282686220800CBC62F /* Assets.xcassets */; };
 		AB111A2C2686220800CBC62F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB111A2A2686220800CBC62F /* LaunchScreen.storyboard */; };
+		AB111A342686240200CBC62F /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB111A332686240200CBC62F /* ArticleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AB111A282686220800CBC62F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB111A2B2686220800CBC62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB111A2D2686220800CBC62F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB111A332686240200CBC62F /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				AB111A1F2686220700CBC62F /* AppDelegate.swift */,
 				AB111A212686220700CBC62F /* SceneDelegate.swift */,
 				AB111A232686220700CBC62F /* ViewController.swift */,
+				AB111A332686240200CBC62F /* ArticleViewModel.swift */,
 				AB111A252686220700CBC62F /* Main.storyboard */,
 				AB111A282686220800CBC62F /* Assets.xcassets */,
 				AB111A2A2686220800CBC62F /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB111A242686220700CBC62F /* ViewController.swift in Sources */,
+				AB111A342686240200CBC62F /* ArticleViewModel.swift in Sources */,
 				AB111A202686220700CBC62F /* AppDelegate.swift in Sources */,
 				AB111A222686220700CBC62F /* SceneDelegate.swift in Sources */,
 			);

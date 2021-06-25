@@ -10,8 +10,8 @@ import Foundation
 struct Article: Decodable {
     let title: String
 
-    init(json: [String: Any]) {
-        title = json["title"] as? String ?? ""
+    init(dic: [String: Any]) {
+        title = dic["title"] as? String ?? ""
     }
     
 }
